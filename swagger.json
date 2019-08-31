@@ -1,0 +1,50 @@
+{
+    "openapi": "3.0.2",
+    "info": {
+        "title": "Demo Weather Api",
+        "description": "Documentacion de la API.",
+        "version": "0.1"
+    },
+    "servers": [{
+            "url": "http://localhost:3000/"
+        }
+    ],
+    "paths": {
+        "/weather/{city}": {
+            "get": {
+                "tags": [
+                    "Weather"
+                ],
+                "description": "Pide la informacion del tiempo a los servicios de OpenWeather",
+                "parameters": [{
+                    "in": "path",
+                    "name": "city",
+                    "schema": {
+                        "type": "string"
+                    },
+                    "required": true,
+                    "description": "Nombre de la ciudad.",
+                    "example": "Buenos Aires"
+                }],
+                "security": [{
+                    "UserSecurity": []
+                }],
+                "responses": {
+                    "200": {
+                        "description": "Devuelve un Json con la informacion solicitada.",
+                        "content": {
+                            "application/json; charset=utf-8": {
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Ciudad no encontrada."
+                    }
+                }
+            }
+        }
+    }
+}

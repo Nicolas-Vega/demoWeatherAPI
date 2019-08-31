@@ -16,7 +16,7 @@ request(app)
 request(app)
   .get('/weather/Prueba')
   .expect('Content-Type', /json/)
-  .expect(200)
+  .expect(404)
   .then(response => {
     assert(response.body.cod, '404')
 });

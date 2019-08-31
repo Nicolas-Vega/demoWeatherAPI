@@ -16,11 +16,16 @@ const get = (req, res, next) => {
     Request.get(options(city), (error, response, body) => {
         if(error) {
             return console.dir(error);
-            next(error);
         }
-        res.json(JSON.parse(body));
+        var response = JSON.parse(body);
+
+        if (response.cod === "404"){
+            res.status(404).json({response});
+        } else {
+            res.json(response);
+        }
     });
-  };
+};
 
 module.exports = {
     get
