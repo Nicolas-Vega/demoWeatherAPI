@@ -1,14 +1,16 @@
 var express = require('express');
 var router = express.Router();
-var controller = require('./controller');
+const controller = require('./controller');
 
 
-module.exports = router => {
-    /**
-    * @api {get} /weather  Get Weather
-    * @apiName getWeather
-    *
-    */
-    router.get('/weather', controller.get);
-  };
+  /**
+  * @api {get} /weather Get the wather of a city
+  * @apiName weather
+  * @apiGroup Weather
+  *
+  * @apiParam {City} city name.
+  * @apiSampleRequest /weather/London
+  */
+router.get('/weather/:city', controller.get);
   
+module.exports = router;
