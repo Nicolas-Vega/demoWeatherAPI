@@ -16,3 +16,10 @@ npm test
 ```
 npm start
 ````
+
+## Probar la api:
+
+Se puede probar el endpoint desde la documentacion hecha en Swagger desde esta url:
+```
+http://localhost:3000/api-docs
+```
