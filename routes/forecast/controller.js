@@ -5,8 +5,9 @@ const get = days => (req, res, next) => {
     const { city } = req.params;
 
     var func = (!city || city == '') ? forecast.getByIp : forecast.get;
+    var param = (!city || city == '') ? req.ip : city;
 
-    func(city, days).then((response) => {
+    func(param, days).then((response) => {
         if (response.cod === "404"){
             res.status(404).json({response});
         } else {
