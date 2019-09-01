@@ -4,19 +4,19 @@ const app = require('../../app');
 
 // 200 - Ok
 request(app)
-  .get('/weather/Buenos Aires')
+  .get('/location')
   .expect('Content-Type', /json/)
   .expect(200)
   .then(response => {
-    assert(response.body.city.name, 'Buenos Aires')
+    assert(response.body.location.region, 'Buenos Aires')
 }
 );
-
+/*
 // 404 - Not Found
 request(app)
-  .get('/weather/Prueba')
+  .get('/location')
   .expect('Content-Type', /json/)
   .expect(404)
   .then(response => {
     assert(response.body.cod, '404')
-});
+});*/

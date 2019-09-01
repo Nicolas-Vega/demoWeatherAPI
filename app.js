@@ -3,10 +3,14 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-var weatherRouter = require('./routes/weather');
 var swaggerUi = require('swagger-ui-express');
 var swaggerDocument = require('./swagger.json');
 var app = express();
+
+var currentRouter = require('./routes/current');
+var forecastRouter = require('./routes/forecast');
+var locationRouter = require('./routes/location');
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -19,7 +23,9 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public'))); 
 
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument))
-app.use('/', weatherRouter);
+app.use('/v1', currentRouter);
+app.use('/v1', forecastRouter);
+app.use('/v1', locationRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

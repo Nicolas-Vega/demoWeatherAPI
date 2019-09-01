@@ -4,13 +4,13 @@ const controller = require('./controller');
 
 
   /**
-  * @api {get} /weather Get the wather of a city
-  * @apiName weather
-  * @apiGroup Weather
+  * @api {get} /forecast Get the wather of a city
+  * @apiName forecast
+  * @apiGroup forecast
   *
   * @apiParam {City} city name.
-  * @apiSampleRequest /weather/London
+  * @apiSampleRequest /forecast/London
   */
-router.get('/weather/:city', controller.get);
+router.get('/forecast/:city?', controller.get(5));
   
 module.exports = router;
