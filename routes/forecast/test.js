@@ -4,7 +4,7 @@ const app = require('../../app');
 
 // 200 - Ok
 request(app)
-  .get('/forecast/Buenos Aires')
+  .get('/v1/forecast/Buenos Aires')
   .expect('Content-Type', /json/)
   .expect(200)
   .then(response => {
@@ -14,7 +14,7 @@ request(app)
 
 // 404 - Not Found
 request(app)
-  .get('/forecast/Prueba')
+  .get('/v1/forecast/Prueba')
   .expect('Content-Type', /json/)
   .expect(404)
   .then(response => {
