@@ -1,23 +1,27 @@
 {
-  "name": "demoweatherapi",
-  "version": "0.0.0",
-  "private": true,
+  "name": "demoweather",
+  "version": "1.0.0",
+  "description": "- Tener Node 10 o superior",
+  "main": "index.js",
   "scripts": {
-    "start": "node ./bin/www",
-    "test": "node runTest.js"
+    "start": "concurrently --kill-others \"cd api && npm start\" \"cd client && npm start\"",
+    "install:api": "cd api && npm install",
+    "install:client": "cd client && npm install",
+    "test": "concurrently --kill-others \"cd api && npm test\"",
+    "postinstall": "run-p install:*"
   },
-  "dependencies": {
-    "cookie-parser": "~1.4.4",
-    "debug": "~2.6.9",
-    "express": "~4.16.1",
-    "http-errors": "~1.6.3",
-    "morgan": "~1.9.1",
-    "pug": "^2.0.4",
-    "request": "^2.88.0",
-    "request-promise-native": "^1.0.7",
-    "swagger-ui-express": "^4.0.7"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nicolas-Vega/demoWeatherAPI.git"
   },
+  "author": "Nicolas Vega",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nicolas-Vega/demoWeatherAPI/issues"
+  },
+  "homepage": "https://github.com/Nicolas-Vega/demoWeatherAPI#readme",
   "devDependencies": {
-    "supertest": "^4.0.2"
+    "concurrently": "^4.1.2",
+    "npm-run-all": "^4.1.5"
   }
 }

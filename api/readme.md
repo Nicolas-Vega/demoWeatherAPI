@@ -12,7 +12,7 @@ npm install
 ```
 npm test
 ````
-## Correr la api y cliente:
+## Correr la api:
 ```
 npm start
 ````

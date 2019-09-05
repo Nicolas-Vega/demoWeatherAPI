@@ -6,12 +6,13 @@ var logger = require('morgan');
 var swaggerUi = require('swagger-ui-express');
 var swaggerDocument = require('./swagger.json');
 var app = express();
+var cors = require('cors');
 
 var currentRouter = require('./routes/current');
 var forecastRouter = require('./routes/forecast');
 var locationRouter = require('./routes/location');
 
-
+app.use(cors());
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
