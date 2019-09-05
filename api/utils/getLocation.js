@@ -26,7 +26,7 @@ const get = (ip) => {
 const parseCity = (data) => {
     var obj = JSON.parse(data);
 
-    return obj.location.region;
+    return obj.location.city;
 }
 
 module.exports = {
