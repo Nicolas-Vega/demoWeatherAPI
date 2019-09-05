@@ -9,7 +9,7 @@ import List from '@material-ui/core/List';
 import Typography from '@material-ui/core/Typography';
 import Buttons from './components/Buttons'
 import Location from './components/Location'
-import Current from './components/Current'
+import {Current} from './components/Current'
 import Forecast from './components/Forecast'
 
 const drawerWidth = 240;

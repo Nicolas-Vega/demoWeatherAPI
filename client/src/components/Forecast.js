@@ -17,7 +17,6 @@ class Location extends PureComponent {
 
     render() {
         const data = this.state.data;
-        debugger;
         if (!(data && data.city)) return (<CircularProgress />)
         return (
             <>
