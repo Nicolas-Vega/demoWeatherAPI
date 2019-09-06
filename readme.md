@@ -19,7 +19,7 @@ npm start
 Url del cliente (El cliente recien esta empezado, consume datos y los muestra pero faltaba
 terminar los componentes que grafican y agregar las opciones para diferentes ciudades):
 ````
-http://localhost:3001
+http://localhost:3000
 ````
 
 
