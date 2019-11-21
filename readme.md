@@ -1,31 +1,36 @@
-# Requisitos
-- Tener Node 10 o superior
+# Demo proyect of an API
 
-# Instalacion
+This API get the current weather information using you current IP or via a name of a city. The client part is no completed since is was no requiered for the job that I made it for. You can test it easily anyway using the documention made with Swagger / OpenAPI.
 
-- Correr el comando para instalar todas las dependencias:
+# Requiments
+- Have Node 10 or superior installed.
+
+# Installation
+
+- Run the command to install all the dependecies:
 ```
 npm install
 ````
 
-## Correr tests:
+## Run test:
 ```
 npm test
 ````
-## Correr la api y cliente:
+## Run the api and client:
 ```
 npm start
 ````
-Url del cliente (El cliente recien esta empezado, consume datos y los muestra pero faltaba
-terminar los componentes que grafican y agregar las opciones para diferentes ciudades):
-````
-http://localhost:3000
-````
 
+## Testing the api:
 
-## Probar la api:
-
-Se puede probar el endpoint desde la documentacion hecha en Swagger desde esta url:
+You can test all the endpoints and see the respons you can use the documentation made with OpenAPI on this link:
 ```
 http://localhost:3001/api-docs
 ```
+
+## Url of the client
+
+(The client is working, it consume the information from the API and shows some data but it need some work graphic wise, I was planing to make a single component that fill all the requiments.)
+````
+http://localhost:3000
+````
