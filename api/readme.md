@@ -1,25 +1,25 @@
-# Requisitos
-- Tener Node 10 o superior
+# Requiments
+- Have Node 10 or superior installed.
 
-# Instalacion
+# Installation
 
-- Correr el comando para instalar todas las dependencias:
+- Run the command to install all the dependecies:
 ```
 npm install
 ````
 
-## Correr tests:
+## Run test:
 ```
 npm test
 ````
-## Correr la api:
+## Run the api:
 ```
 npm start
 ````
 
-## Probar la api:
+## Testing the api:
 
-Se puede probar el endpoint desde la documentacion hecha en Swagger desde esta url:
+You can test all the endpoints and see the respons you can use the documentation made with OpenAPI on this link:
 ```
 http://localhost:3001/api-docs
 ```
